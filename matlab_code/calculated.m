@@ -1,0 +1,10 @@
+EbN0_db = 0:10; 
+EbN0=2*10.^(EbN0_db/10);
+EbN0=sqrt(EbN0);
+%g=qfunc(EbN0).*(2*ones(1,11)-qfunc(EbN0));
+g=qfunc(EbN0);
+plot(BER);
+hold on;
+ylabel("BER");
+xlabel("SNR");
+plot(g);
